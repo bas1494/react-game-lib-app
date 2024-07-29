@@ -1,25 +1,30 @@
-import NavBar from "./NavBar";
+import SideBar from "./SideBar";
+import { NavBarProvider } from "../context/NavBarProvider";
 import translationService from "../services/translation-service";
 import { useEffect } from "react";
 import httpService from "../services/http-service";
+import Toolbar from "./Toolbar";
+import Footer from "./Footer";
 
 const Template = () => {
-  useEffect(() => {
-    httpService.get("pokemon").then((response) => {
-      console.log(response);
-    });
-  }, []);
+  // useEffect(() => {
+  //   httpService.get("games").then((response) => {
+  //     console.log(response);
+  //   });
+  // }, []);
 
   return (
-    <div className="container-fluid min-vh-100 max-vh-100">
-      <div className="row">
-        <div className="col-sm-auto bg-light sticky-top">
-          <NavBar />
+    <div className="wrapper">
+      <NavBarProvider>
+        <SideBar />
+        <div className="main">
+          <Toolbar />
+          <main className="content px-3 py-2">
+            <div className="container-fluid">TODO: Library stuff here!</div>
+          </main>
+          <Footer />
         </div>
-        <div className="col-sm p-3 max-vh-100">
-          {translationService.translateString("page.main.router.title")}
-        </div>
-      </div>
+      </NavBarProvider>
     </div>
   );
 };
