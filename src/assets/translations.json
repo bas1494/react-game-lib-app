@@ -1,0 +1,10 @@
+{    
+    "page.home.title": {
+        "nl": "Thuis pagina",
+        "en": "Home page"
+    },
+    "page.main.router.title" : {
+        "nl": "Hier moet iets van een routeroutlet komen...",
+        "en": "Should be something like a router outlet..."
+    }
+}
