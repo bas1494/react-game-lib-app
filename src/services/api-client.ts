@@ -1,4 +1,4 @@
-import axios, { CanceledError } from "axios";
+import axios from "axios";
 import API_KEY from "../config/secret";
 
 export default axios.create({
@@ -7,5 +7,3 @@ export default axios.create({
         key: API_KEY,
     },
 })
-
-export {CanceledError};
