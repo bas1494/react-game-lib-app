@@ -7,7 +7,7 @@ const GameList = () => {
 
   return (
     <>
-      <div className="row border-bottom py-3">
+      <div className="row border-bottom py-3 mb-3">
         <div className="col-auto">TODO: GameFilter</div>
         <div className="col-auto">TODO: GameSorter</div>
         <div className="col-auto">TODO: Input searchfield</div>

@@ -31,7 +31,6 @@ const GamePlatformIconList = ({ platforms }: Props) => {
     web: BsGlobe,
   };
 
-  console.log(platforms);
   return (
     <IconContext.Provider value={{ className: "platform-icon" }}>
       {platforms.map((platform) => {
