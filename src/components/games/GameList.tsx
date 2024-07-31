@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GameQuery } from "../models/games";
+import { GameQuery } from "../../models/games";
 import GameGrid from "./GameGrid";
 
 const GameList = () => {

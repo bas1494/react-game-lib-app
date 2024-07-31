@@ -2,7 +2,7 @@ import SideBar from "./components/SideBar";
 import { NavBarProvider } from "./context/NavBarProvider";
 import Toolbar from "./components/Toolbar";
 import Footer from "./components/Footer";
-import GameList from "./components/GameList";
+import GameList from "./components/games/GameList";
 
 function App() {
   return (

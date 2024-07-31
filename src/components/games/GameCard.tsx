@@ -1,5 +1,5 @@
-import { Game } from "../models/games";
-import getCroppedImageUrl from "../services/image-url";
+import { Game } from "../../models/games";
+import getCroppedImageUrl from "../../services/image-url";
 
 interface Props {
   game: Game;
