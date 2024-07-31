@@ -1,5 +1,5 @@
 import { MouseEvent, ReactNode } from "react";
-import { BtnTypes } from "../types/literals";
+import { BtnTypes } from "../../types/literals";
 
 interface Props {
   children: ReactNode;

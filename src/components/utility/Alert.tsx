@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { AlerColors } from "../types/literals";
+import { AlerColors } from "../../types/literals";
 
 interface Props {
   children: ReactNode;
