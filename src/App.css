@@ -129,6 +129,15 @@ i.sidebar-link-icon {
     width: 100vw;
 }
 
+.platform-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--bs-dark);   
+    margin-right: 5px;
+    opacity: .7;
+}
+
+
 @media (min-width:768px) {
     .content {
         max-width: auto;

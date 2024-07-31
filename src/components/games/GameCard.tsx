@@ -1,5 +1,6 @@
 import { Game } from "../../models/games";
 import getCroppedImageUrl from "../../services/image-url";
+import GamePlatformIconList from "./GamePlatformIconList";
 
 interface Props {
   game: Game;
@@ -15,7 +16,9 @@ const GameCard = ({ game }: Props) => {
       ></img>
       <div className="card-body">
         <h5 className="card-title text-truncate">{game.name}</h5>
-        <p>Rating</p>
+        <GamePlatformIconList
+          platforms={game.parent_platforms?.map((p) => p.platform)}
+        />
         <p>Rating</p>
       </div>
     </div>
