@@ -1,6 +1,6 @@
 import useGames, { useGamesStatic } from "../hooks/useGames";
 import { GameQuery } from "../models/games";
-import Alert from "./Alert";
+import Alert from "./utilities/Alert";
 import GameCard from "./GameCard";
 
 interface Props {
