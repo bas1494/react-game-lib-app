@@ -1,6 +1,7 @@
 import useData from "./useData";
 import { GameQuery } from "../models/games";
 import { Game } from "../models/games";
+import GameStaticData from '../data/games';
 
 const useGames = (gameQuery: GameQuery) =>
     useData<Game>(
@@ -15,5 +16,8 @@ const useGames = (gameQuery: GameQuery) =>
       },
       [gameQuery]
     );
-  
-  export default useGames;
+
+const useGamesStatic = (gameQuery: GameQuery) => ({ data: GameStaticData, isLoading: false, error: null });
+
+export { useGamesStatic };  
+export default useGames;
