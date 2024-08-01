@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GameQuery } from "../../models/games";
 import GameGrid from "./GameGrid";
 import GameSortSelector from "./GameSortSelector";
+import InputSearch from "../utilities/InputSearch";
 
 const GameList = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -17,7 +18,14 @@ const GameList = () => {
             }
           />
         </div>
-        <div className="col-auto">TODO: Input searchfield</div>
+        <div className="col-auto">
+          <InputSearch
+            placeHolder="Search Games"
+            onChange={(searchText) =>
+              setGameQuery({ ...gameQuery, searchText })
+            }
+          />
+        </div>
       </div>
       <GameGrid gameQuery={gameQuery} />
     </>
