@@ -15,7 +15,7 @@ const Toolbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="pt-2">
-        <h4>Admin Dashboard</h4>
+        <h4>Games</h4>
       </div>
     </nav>
   );
