@@ -67,6 +67,14 @@ const DropDown = ({
         {boxLabel}
       </div>
       <ul className="dropdown-menu">
+        <li onClick={clearSelection}>
+          <button
+            className="dropdown-item btn btn-outline text-danger"
+            disabled={selectedValues.size === 0}
+          >
+            Clear selection
+          </button>
+        </li>
         {options.map((option) => (
           <li key={option.value} onClick={() => onItemClick(option.value)}>
             <div
@@ -79,16 +87,6 @@ const DropDown = ({
             </div>
           </li>
         ))}
-        {multiSelect && (
-          <li onClick={clearSelection}>
-            <button
-              className="dropdown-item btn btn-outline text-danger"
-              disabled={selectedValues.size === 0}
-            >
-              Clear selection
-            </button>
-          </li>
-        )}
       </ul>
     </div>
   );
