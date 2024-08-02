@@ -1,3 +1,4 @@
+import { useTranslation } from "../../context/TranslationProvider";
 import usePlatforms from "../../hooks/usePlatforms";
 import { Platform } from "../../models/games";
 import SelectBoxOption from "../../models/selectBoxOption";
@@ -9,6 +10,7 @@ interface Props {
 
 const GamePlatformSelector = ({ onSelectPlatform }: Props) => {
   const { data } = usePlatforms();
+  const { translate } = useTranslation();
 
   const platformOptions: SelectBoxOption[] = data.map((platform) => {
     return { text: platform.name, value: platform.slug };
@@ -25,7 +27,7 @@ const GamePlatformSelector = ({ onSelectPlatform }: Props) => {
 
   return (
     <DropDown
-      label="Filter on platforms"
+      label={translate("page.game_library.filters_platform.placeholder")}
       options={platformOptions}
       onSelect={(value) => onDropdownSelect(value as string)}
     />

@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { NavBarContext } from "../context/NavBarProvider";
+import { useTranslation } from "../context/TranslationProvider";
 
 const Toolbar = () => {
   const { toggleCollapse } = useContext(NavBarContext);
+  const { translate } = useTranslation();
 
   return (
     <nav className="navbar navbar-expand px-1 border-bottom navbar-dark pt-3">
@@ -15,7 +17,7 @@ const Toolbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="pt-2">
-        <h4>Games</h4>
+        <h4>{translate("page.game_library.title")}</h4>
       </div>
     </nav>
   );

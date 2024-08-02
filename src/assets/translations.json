@@ -1,10 +1,18 @@
 {    
-    "page.home.title": {
-        "nl": "Thuis pagina",
-        "en": "Home page"
+    "page.game_library.title": {
+        "nl": "Games",
+        "en": "Games"
     },
-    "page.main.router.title" : {
-        "nl": "Hier moet iets van een routeroutlet komen...",
-        "en": "Should be something like a router outlet..."
+    "page.game_library.filters_platform.placeholder" : {
+        "nl": "Filteren op platform",
+        "en": "Filter on platform"
+    },
+    "page.game_library.filters_genre.placeholder" : {
+        "nl": "Filter op genre",
+        "en": "Filter on genre"
+    },
+    "page.game_library.search_input.placeholder" : {
+        "nl": "Zoek in games",
+        "en": "Search games"
     }
 }

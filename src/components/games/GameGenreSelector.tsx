@@ -1,3 +1,4 @@
+import { useTranslation } from "../../context/TranslationProvider";
 import useGenres from "../../hooks/useGenres";
 import { Genre } from "../../models/games";
 import SelectBoxOption from "../../models/selectBoxOption";
@@ -9,6 +10,7 @@ interface Props {
 
 const GameGenreSelector = ({ onSelectGenre }: Props) => {
   const { data } = useGenres();
+  const { translate } = useTranslation();
 
   const genreOptions: SelectBoxOption[] = data.map((genre) => {
     return { text: genre.name, value: genre.id.toString() };
@@ -29,7 +31,7 @@ const GameGenreSelector = ({ onSelectGenre }: Props) => {
 
   return (
     <DropDown
-      label="Filter on genre"
+      label={translate("page.game_library.filters_genre.placeholder")}
       options={genreOptions}
       onSelect={(value) => onDropdownSelect(value as string)}
     />

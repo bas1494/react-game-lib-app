@@ -5,10 +5,11 @@ import GameSortSelector from "./GameSortSelector";
 import InputSearch from "../utilities/InputSearch";
 import GamePlatformSelector from "./GamePlatformSelector";
 import GameGenreSelector from "./GameGenreSelector";
+import { useTranslation } from "../../context/TranslationProvider";
 
 const GameList = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
+  const { translate } = useTranslation();
   return (
     <>
       <div className="row border-bottom py-3">
@@ -35,7 +36,9 @@ const GameList = () => {
         </div>
         <div className="col-md-6 col-xl-3 mb-2">
           <InputSearch
-            placeHolder="Search Games"
+            placeHolder={translate(
+              "page.game_library.search_input.placeholder"
+            )}
             onChange={(searchText) => {
               setGameQuery({ ...gameQuery, searchText });
             }}
