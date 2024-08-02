@@ -10,7 +10,7 @@ interface Props {
 }
 
 const GameGrid = ({ gameQuery }: Props) => {
-  const { data, error, isLoading } = useGames(gameQuery);
+  const { data, error, isLoading } = useGamesStatic(gameQuery);
   const skeletonItems: number[] = new Array(getAmountOfApproxVisibleItems())
     .fill(1)
     .map((_, index) => index);

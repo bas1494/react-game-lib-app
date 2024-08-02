@@ -5,7 +5,6 @@ interface Props {
   options: SelectBoxOption[];
   defaultValue?: string | undefined;
   hasUndefinedOption?: boolean;
-  multiSelect?: boolean;
   onSelect: (selectedValue: string) => void;
 }
 
@@ -14,13 +13,11 @@ const SelectBoxStandAlone = ({
   options,
   defaultValue = undefined,
   hasUndefinedOption = false,
-  multiSelect = false,
   onSelect,
 }: Props) => {
   return (
     <select
       className="form-select"
-      multiple={multiSelect}
       aria-label={ariaLabel}
       defaultValue={defaultValue}
       onChange={(e) => onSelect(e.target.value)}

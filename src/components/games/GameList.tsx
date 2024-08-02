@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { GameQuery } from "../../models/games";
+import { GameQuery, Platform } from "../../models/games";
 import GameGrid from "./GameGrid";
 import GameSortSelector from "./GameSortSelector";
 import InputSearch from "../utilities/InputSearch";
+import GamePlatformSelector from "./GamePlatformSelector";
 
 const GameList = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -10,7 +11,13 @@ const GameList = () => {
   return (
     <>
       <div className="row border-bottom py-3 mb-3">
-        <div className="col-auto">TODO: GameFilter</div>
+        <div className="col-auto">
+          <GamePlatformSelector
+            onSelectPlatform={(platform: Platform) =>
+              setGameQuery({ ...gameQuery, platform })
+            }
+          />
+        </div>
         <div className="col-auto">
           <GameSortSelector
             onSelectSortOrder={(sortOrder) =>
@@ -21,9 +28,9 @@ const GameList = () => {
         <div className="col-auto">
           <InputSearch
             placeHolder="Search Games"
-            onChange={(searchText) =>
-              setGameQuery({ ...gameQuery, searchText })
-            }
+            onChange={(searchText) => {
+              setGameQuery({ ...gameQuery, searchText });
+            }}
           />
         </div>
       </div>

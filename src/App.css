@@ -137,6 +137,14 @@ i.sidebar-link-icon {
     opacity: .7;
 }
 
+.dropdown-item-selected{
+    background: var(--bs-gray-300) !important;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    background: none;
+}
 
 @media (min-width:768px) {
     .content {
