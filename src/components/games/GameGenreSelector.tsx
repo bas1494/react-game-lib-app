@@ -15,7 +15,7 @@ const GameGenreSelector = ({ onSelectGenre }: Props) => {
   });
 
   const onDropdownSelect = (value: string): void => {
-    const elem = data.find((genre) => genre.slug === (value as string));
+    const elem = data.find((genre) => genre.id === Number(value));
     if (!elem) {
       return;
     }

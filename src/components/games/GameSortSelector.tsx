@@ -1,5 +1,5 @@
 import SelectBoxOption from "../../models/selectBoxOption";
-import SelectBoxStandAlone from "../utilities/SelectBoxStandAlone";
+import DropDown from "../utilities/DropDown";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;
@@ -19,11 +19,11 @@ const GameSortSelector = ({ onSelectSortOrder, sortOrder = "" }: Props) => {
   const currentSortOrder = sortOrders.find((so) => so.value == sortOrder);
 
   return (
-    <SelectBoxStandAlone
-      ariaLabel="select game sort order"
-      onSelect={onSelectSortOrder}
+    <DropDown
+      label="Order by"
+      onSelect={(val) => onSelectSortOrder(val as string)}
       options={sortOrders}
-      defaultValue={currentSortOrder?.value}
+      defaultSelected={currentSortOrder ? [currentSortOrder.value] : []}
     />
   );
 };

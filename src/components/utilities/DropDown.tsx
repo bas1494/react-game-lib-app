@@ -4,7 +4,7 @@ import SelectBoxOption from "../../models/selectBoxOption";
 interface Props {
   label: string;
   options: SelectBoxOption[];
-  currentSelected?: string[];
+  defaultSelected?: string[];
   multiSelect?: boolean;
   onSelect: (values: string[] | string) => void;
 }
@@ -12,7 +12,7 @@ interface Props {
 const DropDown = ({
   label,
   options,
-  currentSelected = [],
+  defaultSelected: currentSelected = [],
   multiSelect = false,
   onSelect,
 }: Props) => {
@@ -67,14 +67,16 @@ const DropDown = ({
         {boxLabel}
       </div>
       <ul className="dropdown-menu">
-        <li onClick={clearSelection}>
-          <button
-            className="dropdown-item btn btn-outline text-danger"
-            disabled={selectedValues.size === 0}
-          >
-            Clear selection
-          </button>
-        </li>
+        {currentSelected.length === 0 && (
+          <li onClick={clearSelection}>
+            <button
+              className="dropdown-item btn btn-outline text-danger"
+              disabled={selectedValues.size === 0}
+            >
+              Clear selection
+            </button>
+          </li>
+        )}
         {options.map((option) => (
           <li key={option.value} onClick={() => onItemClick(option.value)}>
             <div
