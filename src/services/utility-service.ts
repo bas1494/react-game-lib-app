@@ -24,5 +24,14 @@ export const capitalizeFirstLetter = (value: string): string => {
     }
 
     return value.charAt(0).toUpperCase() + value.slice(1);
+}
 
+const approxItemWidth: number = 250;
+const approxItemHeight: number = 250;
+/**
+ * 
+ * @returns Approximant amount of skeleton items to fill the loading screen.
+ */
+export const getAmountOfApproxVisibleItems = (): number => {
+  return Math.round((window.innerHeight / approxItemHeight) * (window.innerWidth / approxItemWidth));
 }

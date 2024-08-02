@@ -1,6 +1,6 @@
 import useGames, { useGamesStatic } from "../../hooks/useGames";
 import { GameQuery } from "../../models/games";
-import getAmountOfApproxVisibleItems from "../../services/skeleton-item-calculator";
+import { getAmountOfApproxVisibleItems } from "../../services/utility-service";
 import Alert from "../utilities/Alert";
 import GameCard from "./GameCard";
 import GameSkeletonCard from "./GameSkeletonCard";
