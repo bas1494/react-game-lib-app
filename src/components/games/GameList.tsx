@@ -10,22 +10,22 @@ const GameList = () => {
 
   return (
     <>
-      <div className="row border-bottom py-3 mb-3">
-        <div className="col-auto">
+      <div className="row border-bottom py-3">
+        <div className="col-md-6 col-xl-3 mb-2">
           <GamePlatformSelector
             onSelectPlatform={(platform: Platform) =>
               setGameQuery({ ...gameQuery, platform })
             }
           />
         </div>
-        <div className="col-auto">
+        <div className="col-md-6 col-xl-3 mb-2">
           <GameSortSelector
             onSelectSortOrder={(sortOrder) =>
               setGameQuery({ ...gameQuery, sortOrder })
             }
           />
         </div>
-        <div className="col-auto">
+        <div className="col-md-6 col-xl-3 mb-2">
           <InputSearch
             placeHolder="Search Games"
             onChange={(searchText) => {

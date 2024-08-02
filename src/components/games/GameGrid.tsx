@@ -20,7 +20,7 @@ const GameGrid = ({ gameQuery }: Props) => {
   }
 
   return (
-    <div className="row">
+    <div className="row py-3">
       {isLoading &&
         skeletonItems.map((skeletonItem) => (
           <div key={skeletonItem} className="col-md-6 col-xl-4 col-xxl-3">

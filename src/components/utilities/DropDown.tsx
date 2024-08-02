@@ -55,7 +55,7 @@ const DropDown = ({
       : selectedValues.size + " Selected";
 
   return (
-    <div className="btn-group">
+    <div>
       <div
         className="form-select"
         data-bs-toggle="dropdown"
