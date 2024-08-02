@@ -1,5 +1,5 @@
 import { Game } from "../../models/games";
-import getCroppedImageUrl from "../../services/image-url";
+import { getCroppedImageUrl } from "../../services/utility-service";
 import GamePlatformIconList from "./GamePlatformIconList";
 import GameRating from "./GameRating";
 

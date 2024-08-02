@@ -27,7 +27,7 @@ const DropDown = ({
     });
   };
 
-  const toggleSelectOption = (value: string): void => {
+  const onItemClick = (value: string): void => {
     if (!multiSelect) {
       const newValues = new Set<string>().add(value);
       setSelectedValues(newValues);
@@ -51,7 +51,9 @@ const DropDown = ({
     selectedValues.size === 0
       ? label
       : selectedValues.size === 1
-      ? selectedValues.values().next().value
+      ? options.find(
+          (option) => option.value === selectedValues.values().next().value
+        )?.text
       : selectedValues.size + " Selected";
 
   return (
@@ -66,10 +68,7 @@ const DropDown = ({
       </div>
       <ul className="dropdown-menu">
         {options.map((option) => (
-          <li
-            key={option.value}
-            onClick={() => toggleSelectOption(option.value)}
-          >
+          <li key={option.value} onClick={() => onItemClick(option.value)}>
             <div
               className={
                 "dropdown-item " +
