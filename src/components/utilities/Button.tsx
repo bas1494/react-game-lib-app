@@ -14,14 +14,10 @@ const Button = ({
   type = "primary",
   outLined = false,
 }: Props) => {
-  const getClassNames = () => {
-    return "btn btn-" + (outLined ? "outline-" + type : type);
-  };
-
   return (
     <button
       type="button"
-      className={getClassNames()}
+      className={"btn btn-" + (outLined ? "outline-" + type : type)}
       onClick={(event) => btnClick(event)}
     >
       {children}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Game } from "../../models/games";
 import { getCroppedImageUrl } from "../../services/utility-service";
 import GamePlatformIconList from "./GamePlatformIconList";
@@ -9,25 +10,27 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <div className="card">
-      <img
-        src={getCroppedImageUrl(game.background_image)}
-        className="card-img-top"
-        alt={game.background_image}
-      ></img>
-      <div className="card-body">
-        <div className="row mb-3">
-          <div className="col-9">
-            <GamePlatformIconList
-              platforms={game.parent_platforms?.map((p) => p.platform)}
-            />
+    <div className="card game-card">
+      <Link to={`games/${game.id}`}>
+        <img
+          src={getCroppedImageUrl(game.background_image)}
+          className="card-img-top"
+          alt={game.background_image}
+        ></img>
+        <div className="card-body">
+          <div className="row mb-3">
+            <div className="col-9">
+              <GamePlatformIconList
+                platforms={game.parent_platforms?.map((p) => p.platform)}
+              />
+            </div>
+            <div className="col-3 text-end">
+              <GameRating rating={game.metacritic} />
+            </div>
           </div>
-          <div className="col-3 text-end">
-            <GameRating rating={game.metacritic} />
-          </div>
+          <h5 className="card-title text-truncate">{game.name}</h5>
         </div>
-        <h5 className="card-title text-truncate">{game.name}</h5>
-      </div>
+      </Link>
     </div>
   );
 };

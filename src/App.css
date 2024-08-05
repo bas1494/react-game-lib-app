@@ -86,6 +86,10 @@ a.sidebar-link {
     font-size: 1rem;
 }
 
+a.sidebar-link.active {
+    font-weight: bolder;
+}
+
 
 i.sidebar-link-icon {
     font-size: 1.4rem;

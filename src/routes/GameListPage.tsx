@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { GameQuery, Genre, Platform } from "../../models/games";
-import GameGrid from "./GameGrid";
-import GameSortSelector from "./GameSortSelector";
-import InputSearch from "../utilities/InputSearch";
-import GamePlatformSelector from "./GamePlatformSelector";
-import GameGenreSelector from "./GameGenreSelector";
-import { useTranslation } from "../../context/TranslationProvider";
+import { GameQuery, Genre, Platform } from "../models/games";
+import GameGrid from "../components/games/GameGrid";
+import GameSortSelector from "../components/games/GameSortSelector";
+import InputSearch from "../components/utilities/InputSearch";
+import GamePlatformSelector from "../components/games/GamePlatformSelector";
+import GameGenreSelector from "../components/games/GameGenreSelector";
+import { useTranslation } from "../context/TranslationProvider";
 
-const GameList = () => {
+const GameListPage = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
   const { translate } = useTranslation();
   return (
@@ -50,4 +50,4 @@ const GameList = () => {
   );
 };
 
-export default GameList;
+export default GameListPage;
