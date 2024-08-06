@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelectBoxOption from "../../models/selectBoxOption";
+import SelectBoxOption from "../models/selectBoxOption";
 
 interface Props {
   label: string;

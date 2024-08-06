@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { NavBarContext } from "../context/NavBarProvider";
-import menuItems from "../models/menu";
+import { NavBarContext } from "../utilities/context/NavBarProvider";
+import menuItems from "../utilities/data/menu";
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "../context/TranslationProvider";
+import { useTranslation } from "../utilities/context/TranslationProvider";
 
 const SideBar = () => {
   const { isCollapsed } = useContext(NavBarContext);
@@ -22,12 +22,8 @@ const SideBar = () => {
             <li key={menuItem.name} className="sidebar-item">
               <NavLink
                 to={menuItem.path}
-                className={({ isActive, isPending }) =>
-                  isActive
-                    ? "active sidebar-link"
-                    : isPending
-                    ? "pending sidebar-link"
-                    : "sidebar-link"
+                className={({ isActive }) =>
+                  isActive ? "active sidebar-link" : "sidebar-link"
                 }
               >
                 <i className="pe-2 sidebar-link-icon">{<menuItem.icon />}</i>

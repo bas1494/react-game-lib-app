@@ -1,4 +1,4 @@
-import SelectBoxOption from "../../models/selectBoxOption";
+import SelectBoxOption from "../models/selectBoxOption";
 
 interface Props {
   ariaLabel: string;

@@ -1,4 +1,4 @@
-import { useTranslation } from "../context/TranslationProvider";
+import { useTranslation } from "../utilities/context/TranslationProvider";
 
 const NotFound = () => {
   const { translate } = useTranslation();

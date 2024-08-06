@@ -1,7 +1,7 @@
 /**
  * Reduces the amount of data of the resource required by cropping the image url
  * @param imageUrl rawg.io image url
- * @returns imageUrl with cropping based on image url without crop function
+ * @returns imageUrl with cropping based on image url without crop function or a Random picsum picture
  */
 export const getCroppedImageUrl = (imageUrl: string): string => {
     if(imageUrl == null || imageUrl.length === 0) {

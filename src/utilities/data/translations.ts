@@ -1,4 +1,4 @@
-{    
+export default {    
     "menu.item.games": {
         "nl": "Games",
         "en": "Games"

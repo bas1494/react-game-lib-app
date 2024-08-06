@@ -1,6 +1,6 @@
-import useData from "./useData";
-import { GameQuery } from "../models/games";
-import { Game } from "../models/games";
+import useData from "../../utilities/hooks/useData";
+import { GameQuery } from "../models/gameModels";
+import { Game } from "../models/gameModels";
 import GameStaticData from '../data/games';
 
 const useGames = (gameQuery: GameQuery) =>

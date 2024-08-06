@@ -1,5 +1,5 @@
-import SelectBoxOption from "../../models/selectBoxOption";
-import DropDown from "../utilities/DropDown";
+import SelectBoxOption from "../../utilities/models/selectBoxOption";
+import DropDown from "../../utilities/components/DropDown";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;

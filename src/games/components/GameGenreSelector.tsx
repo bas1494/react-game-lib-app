@@ -1,8 +1,8 @@
-import { useTranslation } from "../../context/TranslationProvider";
-import useGenres from "../../hooks/useGenres";
-import { Genre } from "../../models/games";
-import SelectBoxOption from "../../models/selectBoxOption";
-import DropDown from "../utilities/DropDown";
+import { useTranslation } from "../../utilities/context/TranslationProvider";
+import useGenres from "../hooks/useGenres";
+import { Genre } from "../models/gameModels";
+import SelectBoxOption from "../../utilities/models/selectBoxOption";
+import DropDown from "../../utilities/components/DropDown";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;

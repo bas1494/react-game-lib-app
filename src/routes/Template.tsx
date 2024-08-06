@@ -1,10 +1,8 @@
 import SideBar from "./SideBar";
-
 import Toolbar from "./Toolbar";
 import Footer from "./Footer";
-
 import { Outlet } from "react-router-dom";
-import { NavBarProvider } from "../context/NavBarProvider";
+import { NavBarProvider } from "../utilities/context/NavBarProvider";
 
 function App() {
   return (

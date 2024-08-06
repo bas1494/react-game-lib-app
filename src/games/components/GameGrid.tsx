@@ -1,8 +1,8 @@
-import useGames, { useGamesStatic } from "../../hooks/useGames";
-import { GameQuery } from "../../models/games";
+import useGames, { useGamesStatic } from "../hooks/useGames";
+import { GameQuery } from "../models/gameModels";
 import { getAmountOfApproxVisibleItems } from "../../services/utility-service";
-import Alert from "../utilities/Alert";
-import GameCard from "./GameCard";
+import Alert from "../../utilities/components/Alert";
+import GameCard from "../../games/components/GameCard";
 import GameSkeletonCard from "./GameSkeletonCard";
 
 interface Props {

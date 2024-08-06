@@ -1,9 +1,14 @@
 import { ReactNode, createContext, useState } from "react";
 
-export const NavBarContext = createContext<{
+interface NavBarContextProps {
   isCollapsed: boolean;
   toggleCollapse: () => void;
-}>({ isCollapsed: false, toggleCollapse: () => {} });
+}
+
+export const NavBarContext = createContext<NavBarContextProps>({
+  isCollapsed: false,
+  toggleCollapse: () => {},
+});
 
 interface NavBarProviderProps {
   children: ReactNode;

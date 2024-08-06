@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { GameQuery, Genre, Platform } from "../models/games";
-import GameGrid from "../components/games/GameGrid";
-import GameSortSelector from "../components/games/GameSortSelector";
-import InputSearch from "../components/utilities/InputSearch";
-import GamePlatformSelector from "../components/games/GamePlatformSelector";
-import GameGenreSelector from "../components/games/GameGenreSelector";
-import { useTranslation } from "../context/TranslationProvider";
+import { GameQuery, Genre, Platform } from "../models/gameModels";
+import GameGrid from "../components/GameGrid";
+import GameSortSelector from "../components/GameSortSelector";
+import InputSearch from "../../utilities/components/InputSearch";
+import GamePlatformSelector from "../components/GamePlatformSelector";
+import GameGenreSelector from "../components/GameGenreSelector";
+import { useTranslation } from "../../utilities/context/TranslationProvider";
 
 const GameListPage = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);

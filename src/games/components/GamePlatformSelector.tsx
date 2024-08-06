@@ -1,8 +1,8 @@
-import { useTranslation } from "../../context/TranslationProvider";
-import usePlatforms from "../../hooks/usePlatforms";
-import { Platform } from "../../models/games";
-import SelectBoxOption from "../../models/selectBoxOption";
-import DropDown from "../utilities/DropDown";
+import { useTranslation } from "../../utilities/context/TranslationProvider";
+import usePlatforms from "../hooks/usePlatforms";
+import { Platform } from "../models/gameModels";
+import SelectBoxOption from "../../utilities/models/selectBoxOption";
+import DropDown from "../../utilities/components/DropDown";
 
 interface Props {
   onSelectPlatform: (platforms: Platform) => void;

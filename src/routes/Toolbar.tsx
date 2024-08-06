@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
-import { NavBarContext } from "../context/NavBarProvider";
-import { useTranslation } from "../context/TranslationProvider";
+import { useContext } from "react";
+import { NavBarContext } from "../utilities/context/NavBarProvider";
+import { useTranslation } from "../utilities/context/TranslationProvider";
 
 const Toolbar = () => {
   const { toggleCollapse } = useContext(NavBarContext);

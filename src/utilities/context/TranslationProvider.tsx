@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
-import { Localization } from "../types/localizations";
-import rawTranslations from "../assets/translations.json";
+import { createContext, ReactNode, useContext, useState } from "react";
+import { Localization } from "../models/localizations";
+import rawTranslations from "../data/translations";
 
 const translations: Localization = rawTranslations as Localization;
 
@@ -10,13 +10,15 @@ interface TranslationContextProps {
   translate: (key: string) => string;
 }
 
-const TranslationContext = createContext<TranslationContextProps | undefined>(
-  undefined
+const TranslationContext = createContext<TranslationContextProps>(
+  {} as TranslationContextProps
 );
 
-export const TranslationProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+interface TranslationProviderProps {
+  children: ReactNode;
+}
+
+export const TranslationProvider = ({ children }: TranslationProviderProps) => {
   const [language, setLanguage] = useState<string>("en");
 
   const translate = (key: string): string => {
